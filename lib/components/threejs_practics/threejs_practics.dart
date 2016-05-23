@@ -3,7 +3,6 @@ library khoroshilov_su.components.threejs_practics.threejs_practics;
 import 'package:angular2/core.dart';
 import 'dart:html';
 import 'dart:async';
-import 'package:angular2/router.dart';
 
 import 'jsToDart.dart';
 
@@ -18,20 +17,19 @@ const List<String> js_sources = const [
     selector: 'threejs-practics-cmp',
     templateUrl: 'threejs_practics.html',
     styleUrls: const ['threejs_practics.css'],
-    directives: const [ROUTER_DIRECTIVES]
+    directives: const []
 )
 class ThreeJSPracticsCmp implements AfterViewInit {
 
   ElementRef _host;
-  Router angularRouter;
 
   Element get host => (_host.nativeElement as HtmlElement);
 
-  ThreeJSPracticsCmp(this._host, Router this.angularRouter);
+  ThreeJSPracticsCmp(this._host);
 
   ngAfterViewInit() {
     loadJS().then((_) {
-//      threeJSPracticsStart();
+      threeJSPracticsStart();
     });
   }
 
