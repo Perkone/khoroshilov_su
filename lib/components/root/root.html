@@ -1,0 +1,11 @@
+<div [ngSwitch]="location">
+    <div *ngSwitchWhen="'menu'">
+        <h1>Меню</h1>
+        <div><a href="#exam">hello</a></div>
+        <div><a href="threejs">threejs</a></div>
+    </div>
+    <h1 *ngSwitchWhen="'hello'" >Вот тебе мой большой привет, друг!</h1>
+    <threejs-practics-cmp *ngSwitchWhen="'threejs'"></threejs-practics-cmp>
+</div>
+<div style="background: gold; height: 1400px;"></div>
+<div><a name="exam">exam</a></div>
