@@ -1,6 +1,7 @@
 library khoroshilov_su.components.home.home;
 
 import 'package:angular2/core.dart';
+import 'dart:html';
 
 @Component(
     selector: 'home-cmp',
@@ -8,5 +9,13 @@ import 'package:angular2/core.dart';
     styleUrls: const ['home.css'],
     directives: const []
 )
-class HomeCmp {
+class HomeCmp
+    implements AfterContentChecked {
+
+  ngAfterContentChecked() {
+    if (window.location.hash == '#!') {
+      window.history.pushState(null, null, '/');
+    }
+  }
+
 }

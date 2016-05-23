@@ -1,3 +1,7 @@
 <h1>Level 1</h1>
-<div id="menu"></div>
-<a href="#!">Home</a>
+<div id="menu">
+    <a [routerLink]="['./Home']">Home</a>
+    <a [routerLink]="['Lvl2']">Level_2</a>
+</div>
+<router-outlet></router-outlet>
+
