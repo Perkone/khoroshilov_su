@@ -2,23 +2,33 @@ library khoroshilov_su.components.root.root;
 
 import 'package:angular2/core.dart';
 import 'package:angular2/router.dart';
-//import 'package:route_hierarchical/client.dart' as RH;
 
+import '../home/home.dart';
 import '../threejs_practics/threejs_practics.dart';
+import '../lvl1/lvl1.dart';
+
 
 @Component(
     selector: 'root-cmp',
     templateUrl: 'root.html',
-    directives: const [ROUTER_DIRECTIVES, ThreeJSPracticsCmp]
+    styleUrls: const ['root.css'],
+    directives: const [ROUTER_DIRECTIVES]
 )
-class RootCmp implements AfterViewInit {
-  ElementRef _host;
-  Router angularRouter;
-  String location = 'menu';
+@RouteConfig(const [
+  const Route(path: '/', name: 'Home', component: HomeCmp, useAsDefault: true),
+  const Route(path: '/threejs', name: 'Threejs', component: ThreeJSPracticsCmp),
+  const Route(path: '/lvl1', name: 'Lvl1', component: Lvl1Cmp)
+])
+class RootCmp
+    implements AfterViewInit, OnInit {
 
-  RootCmp(this._host, Router this.angularRouter);
+  Router angularRouter;
+
+  RootCmp(Router this.angularRouter);
 
   ngAfterViewInit() {
+  }
 
+  ngOnInit() {
   }
 }

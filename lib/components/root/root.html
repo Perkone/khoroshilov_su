@@ -1,13 +1,6 @@
-<div [ngSwitch]="location">
-    <div *ngSwitchWhen="'menu'">
-        <h1>Меню</h1>
-        <div><a href="#anchor-test">anchor test</a></div>
-        <div><a href="#hello">hello</a></div>
-        <div><a href="#threejs">threejs</a></div>
-    </div>
-    <h1 *ngSwitchWhen="'hello'" >Вот тебе мой большой привет, друг!</h1>
-    <threejs-practics-cmp *ngSwitchWhen="'threejs'"></threejs-practics-cmp>
+<div id="menu">
+    <a [routerLink]="['Home']">Home</a>
+    <a [routerLink]="['Threejs']">ThreeJS</a>
+    <a [routerLink]="['Lvl1']">Level_1</a>
 </div>
-<div style="height: 2000px;"></div>
-<div><a name="anchor-test">exam</a></div>
-<div style="height: 2000px;"></div>
+<router-outlet></router-outlet>

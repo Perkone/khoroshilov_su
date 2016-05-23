@@ -1,0 +1,8 @@
+:host {
+    display: block;
+}
+
+div#menu {
+    text-align: center;
+    height: 50px;
+}
