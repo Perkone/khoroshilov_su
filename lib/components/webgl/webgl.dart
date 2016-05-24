@@ -4,6 +4,7 @@ import 'package:angular2/core.dart';
 import 'dart:html';
 import 'dart:web_gl';
 import 'dart:typed_data';
+import 'package:khoroshilov_su/utils.dart';
 
 @Component(
     selector: 'webgl-cmp',
@@ -20,6 +21,7 @@ class WebGLCmp implements AfterViewInit {
   WebGLCmp(this._host);
 
   ngAfterViewInit() {
+    changeTitle('WebGL | Хорошилов А.С.');
     webglStart();
   }
 

@@ -1,0 +1,95 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#top-panel {
+    position: fixed;
+    top: -100%;
+    height: 100%;
+    margin-top: 82px;
+    z-index: 10;
+    width: 100%;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition-duration: 1s;
+}
+
+#top-panel[active] {
+    top: -82px;
+    background-color: rgba(0, 0, 0, 1);
+}
+
+#contact-form {
+    height: 100%;
+    box-sizing: border-box;
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    border-bottom-style: solid;
+    text-align: center;
+}
+
+div.my-input {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 70px;
+    width: 450px;
+    border-style: solid;
+    border-color: #48a9c5;
+    border-radius: 5px;
+}
+
+div.my-input > input {
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-family: MyItalic;
+    font-size: 1.5em;
+    padding: 0 20px;
+    border: none;
+    border-left: 5px solid white;
+}
+
+div.my-input > input:focus {
+    outline: none;
+    border-left: 5px solid #48a9c5;
+    /*border-left: 5px solid #a94442;*/
+}
+
+div.blue-button {
+    display: inline-block;
+    background-image: url('packages/khoroshilov_su/components/semplex_landing/res/img/blue_button.png');
+    background-repeat: no-repeat;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    height: 69px;
+    width: 373px;
+    background-size: 100% 100%;
+    font-family: MyBold;
+    letter-spacing: 0.07em;
+    font-size: 1.3em;
+}
+
+div.blue-button div {
+    height: 100%;
+    width: 100%;
+}
+
+@font-face {
+    font-family: MyBold;
+    src: url("packages/khoroshilov_su/components/semplex_landing/res/fonts/PT_Sans-Web-Bold.ttf");
+}
+@font-face {
+    font-family: MyItalic;
+    src: url("packages/khoroshilov_su/components/semplex_landing/res/fonts/PT_Sans-Web-Italic.ttf");
+}
+@font-face {
+    font-family: MyRegular;
+    src: url("packages/khoroshilov_su/components/semplex_landing/res/fonts/PT_Sans-Web-Regular.ttf");
+}

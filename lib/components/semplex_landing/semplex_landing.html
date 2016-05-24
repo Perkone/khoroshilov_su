@@ -1,0 +1,46 @@
+<div id="top-panel">
+
+    <div style="height: 100%; box-sizing: border-box; padding-bottom: 82px;">
+        <div id="contact-form">
+            <div style="overflow-x: hidden; overflow-y: auto; box-sizing: border-box; height: 100%;">
+                <div style="text-align: right; margin-top: 50px; margin-right: 50px;">
+                    <img src="packages/khoroshilov_su/components/semplex_landing/res/img/close_2.png" style="cursor: pointer;"
+                         (click)="buttonClickOff()">
+                </div>
+                <div style="margin-top: 30px; font-family: MyBold; font-size: 3em;">ОСТАВИТЬ ЗАЯВКУ НА УЧАСТИЕ</div>
+                <div style="margin-top: 15px; font-family: MyRegular;  font-size: 1.3em;">Оставьте свои контактные
+                    данные и мы расскажем вам о новых <br>возможностях инвестирования
+                </div>
+                <form>
+                    <div class="my-input" style="margin-top: 30px;"><input placeholder="Ваше имя"
+                                                                           (focus)="scrollToForm()" [(ngModel)]="name"></div>
+                    <br>
+                    <div class="my-input" style="margin-top: 10px;"><input placeholder="Ваш телефон" type="tel" (focus)="scrollToForm()" [(ngModel)]="phone"></div>
+                    <br>
+                    <div class="my-input" style="margin-top: 10px;"><input placeholder="Ваш email" type="email" (focus)="scrollToForm()" [(ngModel)]="email"></div>
+                    <div style="margin-top: 30px;">
+                        <div class="blue-button" (click)="sendFormData('khoroshilov.su', name, email, phone)">
+                            <div style="display: table;">
+                                <div id="blue-button-text" style="display: table-cell; vertical-align: middle;">
+                                    ОТПРАВИТЬ
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding: 10px 10%; margin-top: -82px; height: 82px; box-sizing: border-box;">
+        <img style="height: 100%;" src="packages/khoroshilov_su/components/semplex_landing/res/img/logo.png">
+        <div style="float: right;">
+            <div style="font-family: MyRegular; text-align: right;">Бесплатная горячая линия:</div>
+            <div style="font-family: MyBold; font-size: xx-large;">8 <span style="color: #48a9c5;">800</span> 505 85 96
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<landing style="height: 100%;"></landing>

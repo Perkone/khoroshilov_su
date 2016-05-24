@@ -3,7 +3,7 @@ library khoroshilov_su.components.threejs_practics.threejs_practics;
 import 'package:angular2/core.dart';
 import 'dart:html';
 import 'dart:async';
-
+import 'package:khoroshilov_su/utils.dart';
 import 'jsToDart.dart';
 
 const List<String> js_sources = const [
@@ -28,6 +28,7 @@ class ThreeJSPracticsCmp implements AfterViewInit {
   ThreeJSPracticsCmp(this._host);
 
   ngAfterViewInit() {
+    changeTitle('ThreeJS | Хорошилов А.С.');
     loadJS().then((_) {
       threeJSPracticsStart();
     });
@@ -53,7 +54,7 @@ class ThreeJSPracticsCmp implements AfterViewInit {
 
   threeJSPracticsStart() {
     var practics = new Practics();
-    practics.start(host);
+    practics.runIt(host);
   }
 
 }

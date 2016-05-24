@@ -7,7 +7,7 @@ import 'dart:html';
 @JS('Practics')
 class Practics{
   external factory Practics();
-  external start(HtmlElement thisCmp);
+  external runIt(HtmlElement thisCmp);
 }
 
 

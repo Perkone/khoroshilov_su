@@ -1,0 +1,54 @@
+:host {
+    display: inline-block;
+    cursor: pointer;
+    height: 69px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+div#left-part,
+div#right-part,
+div#center-part {
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+div {
+    height: 100%;
+}
+
+#left-part {
+    background-image: url('packages/khoroshilov_su/components/semplex_landing/res/img/hollow_button/left.png');
+    width: 34px;
+    float: left;
+}
+
+:host:hover > #left-part{
+    background-image: url('packages/khoroshilov_su/components/semplex_landing/res/img/hollow_button/left_active.png');
+}
+
+#right-part {
+    background-image: url('packages/khoroshilov_su/components/semplex_landing/res/img/hollow_button/right.png');
+    width: 34px;
+    float: right;
+}
+
+:host:hover > #right-part{
+    background-image: url('packages/khoroshilov_su/components/semplex_landing/res/img/hollow_button/right_active.png');
+}
+
+#center-part {
+    background-image: url('packages/khoroshilov_su/components/semplex_landing/res/img/hollow_button/center.png');
+    margin: 0 34px;
+    box-sizing: border-box;
+    padding: 5px 0;
+
+}
+
+:host:hover > #center-part{
+    background-image: url('packages/khoroshilov_su/components/semplex_landing/res/img/hollow_button/center_active.png');
+}
+
+
