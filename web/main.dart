@@ -13,6 +13,8 @@ main() {
       [
         ROUTER_PROVIDERS,
         bind(APP_BASE_HREF).toValue('/')
+//        bind(APP_BASE_HREF).toValue('!'),
+//        bind(LocationStrategy).toClass(HashLocationStrategy)
       ]
   );
 }
