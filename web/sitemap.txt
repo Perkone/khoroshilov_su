@@ -1,1 +1,6 @@
 http://khoroshilov.su
+http://khoroshilov.su/index-test
+http://khoroshilov.su/index-test/lvl1
+http://khoroshilov.su/index-test/lvl1/lvl2
+
+
