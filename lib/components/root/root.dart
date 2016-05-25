@@ -7,8 +7,7 @@ import '../menu/menu.dart';
 import '../threejs_practics/threejs_practics.dart';
 import '../webgl/webgl.dart';
 import '../semplex_landing/semplex_landing.dart';
-import '../lvl1/lvl1.dart';
-
+import '../index_test/index_test.dart';
 
 @Component(
     selector: 'root-cmp',
@@ -24,16 +23,18 @@ import '../lvl1/lvl1.dart';
   const Route(path: '/semplex-landing',
       name: 'SemplexLanding',
       component: SemplexLandingCmp),
-  const Route(path: '/lvl1/...', name: 'Lvl1', component: Lvl1Cmp)
+  const Route(
+      path: '/index-test/...', name: 'IndexTest', component: IndexTestCmp)
 ])
-class RootCmp implements AfterViewInit {
+class RootCmp
+    implements AfterViewInit {
 
   Router angularRouter;
 
   RootCmp(Router this.angularRouter) {
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
   }
 
 }
