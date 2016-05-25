@@ -12,8 +12,7 @@ main() {
       RootCmp,
       [
         ROUTER_PROVIDERS,
-        bind(APP_BASE_HREF).toValue('!'),
-        bind(LocationStrategy).toClass(HashLocationStrategy)
+        bind(APP_BASE_HREF).toValue('/')
       ]
   );
 }

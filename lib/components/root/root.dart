@@ -18,14 +18,13 @@ import '../lvl1/lvl1.dart';
 )
 @RouteConfig(const [
   const Route(
-      path: '/menu', name: 'Menu', component: MenuCmp, useAsDefault: true),
+      path: '/', name: 'Menu', component: MenuCmp, useAsDefault: true),
   const Route(path: '/threejs', name: 'Threejs', component: ThreeJSPracticsCmp),
   const Route(path: '/webgl', name: 'Webgl', component: WebGLCmp),
   const Route(path: '/semplex-landing',
       name: 'SemplexLanding',
       component: SemplexLandingCmp),
-  const Route(path: '/lvl1/...', name: 'Lvl1', component: Lvl1Cmp),
-  const Route(path: '*', name: 'Menu', component: MenuCmp)
+  const Route(path: '/lvl1/...', name: 'Lvl1', component: Lvl1Cmp)
 ])
 class RootCmp implements AfterViewInit {
 
