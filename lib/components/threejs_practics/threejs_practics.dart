@@ -1,6 +1,7 @@
 library khoroshilov_su.components.threejs_practics.threejs_practics;
 
 import 'package:angular2/core.dart';
+import 'package:angular2/router.dart';
 import 'dart:html';
 import 'dart:async';
 import 'package:khoroshilov_su/utils.dart';
@@ -19,7 +20,7 @@ const List<String> js_sources = const [
     styleUrls: const ['threejs_practics.css'],
     directives: const []
 )
-class ThreeJSPracticsCmp implements AfterViewInit {
+class ThreeJSPracticsCmp implements AfterViewInit, OnActivate {
 
   ElementRef _host;
 
@@ -27,8 +28,11 @@ class ThreeJSPracticsCmp implements AfterViewInit {
 
   ThreeJSPracticsCmp(this._host);
 
-  ngAfterViewInit() {
+  routerOnActivate(next, prev) {
     changeTitle('ThreeJS | Хорошилов А.С.');
+  }
+
+  ngAfterViewInit() {
     loadJS().then((_) {
       threeJSPracticsStart();
     });

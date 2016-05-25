@@ -1,6 +1,7 @@
 library khoroshilov_su.components.webgl.webgl;
 
 import 'package:angular2/core.dart';
+import 'package:angular2/router.dart';
 import 'dart:html';
 import 'dart:web_gl';
 import 'dart:typed_data';
@@ -12,7 +13,7 @@ import 'package:khoroshilov_su/utils.dart';
     styleUrls: const ['webgl.css'],
     directives: const []
 )
-class WebGLCmp implements AfterViewInit {
+class WebGLCmp implements AfterViewInit, OnActivate {
 
   ElementRef _host;
 
@@ -20,8 +21,11 @@ class WebGLCmp implements AfterViewInit {
 
   WebGLCmp(this._host);
 
-  ngAfterViewInit() {
+  routerOnActivate(next, prev) {
     changeTitle('WebGL | Хорошилов А.С.');
+  }
+
+  ngAfterViewInit() {
     webglStart();
   }
 

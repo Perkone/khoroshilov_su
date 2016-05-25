@@ -1,6 +1,7 @@
 library khoroshilov_su.components.semplex_landing.semplex_landing;
 
 import 'package:angular2/angular2.dart';
+import 'package:angular2/router.dart';
 import 'package:khoroshilov_su/utils.dart';
 import 'dart:html';
 import 'dart:convert';
@@ -13,14 +14,11 @@ import 'package:khoroshilov_su/components/semplex_landing/components/landing_com
     styleUrls: const ['semplex_landing.css'],
     directives: const [FORM_DIRECTIVES, LandingComponent]
 )
-class SemplexLandingCmp
-    implements AfterViewInit {
+class SemplexLandingCmp implements OnActivate {
 
-  ngAfterViewInit() {
+  routerOnActivate(next, prev) {
     changeTitle('Semplex landing | Хорошилов А.С.');
   }
-
-
 
   buttonClickOff() {
     Element e = document.querySelector('#top-panel');

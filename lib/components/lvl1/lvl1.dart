@@ -14,13 +14,14 @@ import '../webgl/webgl.dart';
     directives: const [ROUTER_DIRECTIVES]
 )
 @RouteConfig(const [
-  const Route(path: '/lvl2', name: 'Lvl2', component: Lvl2Cmp, useAsDefault: true),
+  const Route(
+      path: '/lvl2', name: 'Lvl2', component: Lvl2Cmp, useAsDefault: true),
   const Route(path: '/webgl', name: 'Webgl', component: WebGLCmp)
 ])
+class Lvl1Cmp
+    implements OnActivate {
 
-class Lvl1Cmp implements AfterViewInit{
-
-  ngAfterViewInit(){
+  routerOnActivate(next, prev) {
     changeTitle('Level 1 | Хорошилов А.С.');
   }
 
