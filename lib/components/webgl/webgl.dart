@@ -64,7 +64,7 @@ class WebGLCmp implements AfterViewInit, OnActivate {
     _prepareRenderData(gl, p, _vertices);
 
     //Очищаем холст заливая его новым цветом(RedGreenBlueAlpha)
-    gl.clearColor(0.9, 0.9, 0.9, 1);
+    gl.clearColor(0.8, 0.8, 0.8, 1);
     gl.clear(RenderingContext.COLOR_BUFFER_BIT);
 
 
@@ -174,16 +174,16 @@ uniform int uTime;
 uniform vec3 uColor;
 
 float random(float p) {
-  return fract(sin(p) * 10000.);
+  return fract(sin(p) * 500.);
 }
 
 float noise(vec2 p) {
-  float t = float(uTime) / 2000.;
+  float t = float(uTime) / 1000.;
 
   if (t > 1.)
     t -= floor(t);
 
-  return random(p.x * 14. + p.y * sin(t) * .05);
+  return random(p.x * 1000. + p.y * sin(t) * .1);
 }
 
 void main() {
@@ -193,7 +193,8 @@ void main() {
 
 //  wave = (wave + 1.) / 2.;
 
-  vec3 col = vec3(.2, .1, .643) * noise(position);
+//  vec3 col = vec3(.2, .1, .643) * noise(position);
+  vec3 col = vec3(0, 0.7, 0) * noise(position);
 
   gl_FragColor = vec4(vec3(col), 1);
 }
