@@ -20,7 +20,7 @@ const List<String> js_sources = const [
     styleUrls: const ['threejs_practics.css'],
     directives: const []
 )
-class ThreeJSPracticsCmp implements AfterViewInit, OnActivate {
+class ThreeJSPracticsCmp implements AfterViewInit, OnInit {
 
   ElementRef _host;
 
@@ -28,7 +28,7 @@ class ThreeJSPracticsCmp implements AfterViewInit, OnActivate {
 
   ThreeJSPracticsCmp(this._host);
 
-  routerOnActivate(next, prev) {
+  ngOnInit() {
     changeTitle('ThreeJS | Хорошилов А.С.');
   }
 

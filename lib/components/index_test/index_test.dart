@@ -10,10 +10,9 @@ import 'package:khoroshilov_su/utils.dart';
     styleUrls: const ['index_test.css'],
     directives: const [ROUTER_DIRECTIVES]
 )
-class IndexTestCmp
-    implements OnActivate {
+class IndexTestCmp implements OnInit {
 
-  routerOnActivate(next, prev) {
+  ngOnInit() {
     changeTitle('Index test | Хорошилов А.С.');
   }
 

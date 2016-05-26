@@ -10,8 +10,8 @@ import 'package:khoroshilov_su/utils.dart';
     styleUrls: const ['lvl2.css'],
     directives: const [ROUTER_DIRECTIVES]
 )
-class Lvl2Cmp implements OnActivate {
-  routerOnActivate(next, prev) {
+class Lvl2Cmp implements OnInit {
+  ngOnInit() {
     changeTitle('Level 2 | Хорошилов А.С.');
   }
 }

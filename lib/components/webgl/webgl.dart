@@ -13,7 +13,7 @@ import 'package:khoroshilov_su/utils.dart';
     styleUrls: const ['webgl.css'],
     directives: const []
 )
-class WebGLCmp implements AfterViewInit, OnActivate {
+class WebGLCmp implements AfterViewInit, OnInit {
 
   ElementRef _host;
 
@@ -21,7 +21,7 @@ class WebGLCmp implements AfterViewInit, OnActivate {
 
   WebGLCmp(this._host);
 
-  routerOnActivate(next, prev) {
+  ngOnInit() {
     changeTitle('WebGL | Хорошилов А.С.');
   }
 

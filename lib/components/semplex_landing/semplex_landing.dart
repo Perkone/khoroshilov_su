@@ -14,9 +14,9 @@ import 'package:khoroshilov_su/components/semplex_landing/components/landing_com
     styleUrls: const ['semplex_landing.css'],
     directives: const [FORM_DIRECTIVES, LandingComponent]
 )
-class SemplexLandingCmp implements OnActivate {
+class SemplexLandingCmp implements OnInit {
 
-  routerOnActivate(next, prev) {
+  ngOnInit() {
     changeTitle('Semplex landing | Хорошилов А.С.');
   }
 

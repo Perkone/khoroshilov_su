@@ -10,9 +10,9 @@ import 'package:khoroshilov_su/utils.dart';
     styleUrls: const ['menu.css'],
     directives: const [ROUTER_DIRECTIVES]
 )
-class MenuCmp implements OnActivate {
+class MenuCmp implements OnInit {
 
-  routerOnActivate(next, prev) {
+  ngOnInit() {
     changeTitle('Хорошилов А.С.');
   }
 
