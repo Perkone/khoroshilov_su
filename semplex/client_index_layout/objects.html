@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html style="height: 650px; width: 1100px;" prefix="og: http://ogp.me/ns#">
+<head>
+    <script src="//www.google-analytics.com/analytics.js" async=""></script>
+    <base href="/">
+    <meta name="yandex-verification" content="708e0fe287382fd7">
+    <meta name="description" content="Инвестиции в коммерческую недвижимость">
+    <meta name="keywords"
+          content="инвестиции, недвижимость, коммерческая недвижимость, рантье, доход, аренда, доходная недвижимость">
+    <meta property="og:title" content="Инвестиции в коммерческую недвижимость">
+    <meta property="og:image" content="http://semplex.ru/Resources/images/about/scheme.jpg">
+    <meta property="og:locale" content="ru_RU">
+    <meta name="fragment" content="!">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1100">
+    <style>
+        html,
+        body {
+            position: relative;
+        }
+    </style>
+
+    <title>Semplex</title>
+
+    <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript"></script>
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript">
+        try {
+            var yaCounter34362820 = new Ya.Metrika({
+                id: 34362820,
+                clickmap: true,
+                trackLinks: true,
+                accurateTrackBounce: true,
+                webvisor: true
+            });
+        } catch (e) {
+            window.console.error(e);
+        }
+    </script>
+    <noscript>
+        <div><img src="https://mc.yandex.ru/watch/34362820"
+                  style="position:absolute; left:-9999px;" alt=""/>
+        </div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-76010537-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <!-- /Google Analytics -->
+
+    <link rel="stylesheet" href="polymer_flex.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.blue-green.min.css">
+
+    <script defer="defer" src="main.dart.js"></script>
+
+    <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+
+    <style>
+        .entry-loader {
+            width: 100%;
+            height: 100%;
+            background-color: black;
+        }
+
+        .entry-loader > h2 {
+            color: white;
+            margin: 0 0 0 0;
+        }
+
+        .entry-logo {
+            background-image: url(Resources/icons/Semplex/Semplex_1.png);
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 25%;
+            height: 25%;
+        }
+    </style>
+    <style>.main-container {
+        height: 100%;
+
+        content: "";
+        left: 0;
+        right: 0;
+        width: inherit;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .main-loader {
+        background-color: black;
+    }
+
+    .main-loader > * {
+        color: white;
+        font-weight: bold;
+    }
+
+    header {
+        background-color: rgba(0, 0, 0, 0) !important;
+        height: 70px !important;
+        min-height: 56px !important;
+        z-index: 4 !important;
+    }
+
+    .main-menu {
+        height: 70px !important;
+        background-color: black;
+        padding: 0 0 0 0 !important;
+        cursor: pointer;
+    }
+
+    .place-container {
+        content: "";
+        left: 0;
+        right: 0;
+        width: inherit;
+        height: inherit;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .mdl-textfield__input {
+        color: white;
+    }
+
+    .mdl-textfield__label {
+        color: rgba(255, 255, 255, 0.5) !important;
+    }
+
+    .mdl-textfield__label:after {
+        background-color: white !important;
+    }
+
+    login .mdl-button {
+        color: white;
+    }
+
+    .login-form {
+        align-self: center;
+        margin-top: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        height: 190px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.65);
+        color: white;
+    }
+
+    .registration-form {
+        align-self: center;
+        margin-top: 100px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 10px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.65);
+        color: white;
+    }
+
+    .register-bt {
+        align-self: center;
+        margin-top: 10px;
+        background-color: rgba(0, 0, 0, 0.65) !important;
+        color: white !important;
+    }
+
+    .semplex-logo {
+        height: 45px;
+        margin-left: 80px;
+        align-self: center;
+    }
+
+    .logo {
+        height: inherit;
+    }
+
+    .menu-items {
+        min-width: 450px;
+        height: 51px;
+        justify-content: flex-end;
+    }
+
+    .menu-item {
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        color: white;
+        padding-left: 7px;
+        padding-right: 7px;
+    }
+
+    .menu-item > a {
+        color: rgba(255, 0, 0, 0);
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        height: 100%;
+    }
+
+    .menu-item > * {
+        align-self: center;
+    }
+
+    .menu-item h6 {
+        margin: 0 0 0 0;
+        font-weight: bold;
+        color: white;
+    }
+
+    .menu-item.iron-selected h6 {
+        color: white;
+        font-weight: bold;
+        border: solid;
+        border-width: 0px;
+        border-bottom-width: 1px;
+    }
+
+    .private-menu {
+        background-color: rgba(255, 255, 255, 0.2);
+        align-self: center;
+        position: relative;
+        top: 2px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .private-menu h6 {
+        color: #49ABC8 !important;
+    }
+
+    .private-menu-logo {
+        color: #49ABC8 !important;
+        align-self: center;
+        position: relative;
+        margin-right: 5px;
+        bottom: 3px;
+    }
+
+    .phone-place {
+        min-width: 250px;
+        width: 10%;
+        padding-left: 30px;
+    }
+
+    .phone-number {
+        font-weight: bold;
+    }
+
+    .phone-number-colored {
+        color: #49ABC8 !important;
+    }
+
+    .phone-place > * {
+        margin: 0 0 0 0;
+    }
+
+    .private-place {
+        width: 100px;
+    }
+
+    .avatar-place {
+
+    }
+
+    .avatar-container {
+        height: 65px;
+        width: 65px;
+        align-self: flex-end;
+        overflow: hidden;
+        border-radius: 100px;
+        border: solid;
+    }
+
+    .avatar-container:hover {
+        box-shadow: 0px 5px 15px 1px #49ACC9;
+    }
+
+    .logout {
+        height: 80px;
+        width: 80px;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.4);
+        margin-top: 10px;
+        right: 5px;
+        border-radius: 5px;
+        visibility: collapse;
+        pointer-events: none;
+    }
+
+    .logout > i {
+        font-size: 36px;
+    }
+
+    .info {
+        min-width: 250px;
+        margin-left: 25px;
+    }
+
+    .info .mdl-snackbar.is-active {
+        color: #49ABC8;
+        font-weight: bold;
+        align-self: center;
+        max-width: 300px;
+        min-width: 150px;
+    }
+
+    *[main-fon] {
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    #reset-user-pass
+    .reset-pass-from {
+        background-color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        min-width: 250px;
+        min-height: 200px;
+        width: 15%;
+        height: 15%;
+        border-radius: 10px;
+    }
+
+    .reset-pass-from button {
+        margin-left: 5px;
+    }
+    </style>
+    <style>.filter[_ngcontent-ehq-4] {
+        background-color: white;
+        width: 25%;
+        height: 55px;
+        align-self: center;
+        position: absolute;
+        z-index: 9;
+        margin-top: 10px;
+        left: 40%;
+        border-radius: 10px;
+    }
+
+    .filter[_ngcontent-ehq-4] > div[_ngcontent-ehq-4] {
+        width: 90%;
+        align-self: center;
+        color: black;
+        padding: 15px 0 0 0;
+        margin-left: 10px;
+    }
+
+    .filter[_ngcontent-ehq-4] > h6[_ngcontent-ehq-4] {
+        margin: 0 0 0 0;
+        align-self: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    #filter-input[_ngcontent-ehq-4]::-webkit-outer-spin-button, #filter-input[_ngcontent-ehq-4]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    #filter-input[_ngcontent-ehq-4] {
+        -moz-appearance: textfield;
+        color: black;
+    }
+
+    .drop-filter[_ngcontent-ehq-4] {
+        display: none;
+        padding: 5px;
+        color: #3151A2;
+        cursor: pointer;
+    }
+
+    .filter[_ngcontent-ehq-4] .mdl-textfield__input[_ngcontent-ehq-4] {
+        padding: 0 0 0 0;
+    }
+
+    .filter[_ngcontent-ehq-4] .mdl-textfield__label[_ngcontent-ehq-4] {
+        color: black !important;
+        margin-top: -10px !important;
+    }
+
+    .rooms-container[_ngcontent-ehq-4] {
+        justify-content: center;
+    }
+
+    .rooms-container[blured][_ngcontent-ehq-4] {
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+    }
+
+    .generic-rooms[_ngcontent-ehq-4] {
+        padding-top: 25px;
+        justify-content: center;
+        min-width: 350px;
+        width: 90%;
+    }
+
+    .generic-room[_ngcontent-ehq-4] {
+        width: 350px;
+        height: 400px;
+        padding: 5px;
+    }
+
+    .detail-info-panel[_ngcontent-ehq-4] {
+        width: 100%;
+        z-index: 10;
+        margin-top: 4px;
+        position: absolute;;
+    }</style>
+    <style>.more-info-panel {
+        background-color: rgba(0, 0, 0, 0.9);
+        color: white;
+        height: 100%;
+    }
+
+    .more-close-button {
+        position: absolute;
+        top: -1px;
+        left: -22px;
+        background-color: rgb(33, 150, 243) !important;
+    }
+
+    .more-close-button:hover {
+        background: rgb(105, 240, 174) !important;
+    }
+
+    merge-panels[phone-screen] .more-close-button {
+        position: absolute;
+        top: -20px;
+        left: 5px;
+    }
+
+    .more-info-left-menu {
+        display: block;
+        overflow: hidden;
+    }
+
+    .more-info-left-menu > button {
+        align-self: center;
+        margin-top: 10px;
+    }
+
+    .mdl-button--fab.mdl-button--colored {
+        background: #45A2BD;
+    }
+
+    neon-animated-pages {
+        overflow: hidden;
+    }
+
+    .empty-margin {
+        margin: 0 0 0 0;
+    }
+
+    .detail-header {
+        padding-top: 15px;
+        width: 80%;
+        align-self: center;
+        justify-content: space-between;
+    }
+
+    .detail-header * {
+        margin: 0 0 0 0;
+    }
+
+    .image-changer {
+
+    }
+
+    .object-image {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .image-changer > i.material-icons {
+        font-size: 60px;
+    }
+
+    .image-changer > i.material-icons:hover {
+        color: #2196F3;
+    }
+
+    .obj-info > * {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .star-button {
+        align-self: center;
+        border: solid;
+        padding: 10px;
+        border-radius: 10px;
+        border-width: 3px;
+        cursor: pointer;
+    }
+
+    .star-icon {
+        color: white;
+    }
+
+    .star-button > h6 {
+        margin-left: 10px;
+    }
+
+    .header-item {
+        font-weight: bold;
+        margin-right: 10px;
+        font-size: 20px;
+        color: #46A6C2;
+    }
+
+    .image-container {
+        width: 80%;
+        align-self: center;
+        margin-top: 15px;
+        border-top-width: 1px;
+        border-top-style: solid;
+    }
+
+    .detail-menu-items {
+        justify-content: center;
+        padding-top: 3px;
+        padding-bottom: 2px;
+        height: 35px;
+    }
+
+    .detail-menu-items > .menu-item {
+        cursor: pointer;
+        margin-left: 5px;
+        color: white;
+        background-color: rgba(128, 128, 128, 0.35);
+    }
+
+    .detail-menu-items > .menu-item.iron-selected {
+
+    }
+
+    .detail-menu-items > .menu-item.iron-selected > h6 {
+        color: #49ABC8;
+        font-weight: bold;
+        border: solid;
+        border-width: 0px;
+        border-bottom-width: 0px;
+        border-top-width: 0px;
+    }
+
+    geo-map {
+        height: 100%;
+        width: 100%;
+        border: solid;
+        border-width: 5px;
+        border-color: black;
+    }
+
+    geo-map .leaflet-popup-content {
+        color: black;
+    }
+    </style>
+    <style>.bordered[_ngcontent-ehq-6] {
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(35, 62, 83);
+    }
+
+    .more-container[_ngcontent-ehq-6] {
+        top: -1px;
+        position: absolute;
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+
+    .more-container[off][_ngcontent-ehq-6] {
+    }
+
+    .more-container[on][_ngcontent-ehq-6] {
+        display: block;
+    }
+
+    .more-info[_ngcontent-ehq-6] {
+        top: 2px;
+        height: 99%;
+        position: absolute;
+
+    }
+
+    .menu-bordered[_ngcontent-ehq-6] {
+        border-style: solid;
+        border-width: 1px;
+        border-color: black;
+        border-radius: 0px;
+    }
+
+    .more-info-left[off][_ngcontent-ehq-6] {
+        left: -110%;
+    }
+
+    .more-info-left[on][_ngcontent-ehq-6] {
+        left: -1px;
+    }
+
+    .more-info-right[off][_ngcontent-ehq-6] {
+        right: -110%;
+    }
+
+    .more-info-right.phone-screen[on][_ngcontent-ehq-6] {
+        right: -1px;
+    }
+
+    .more-info-right[on][_ngcontent-ehq-6] {
+        right: -6px;
+    }</style>
+    <style>.info-item {
+        justify-content: space-between;
+        width: 90%;
+        align-self: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .info-item > h6 {
+        margin: 0 0 0 0;
+    }
+
+    .placer {
+        border-width: 0;
+        border-bottom-width: 1px;
+        border-bottom-style: dotted;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        margin-bottom: 5px;
+    }
+    </style>
+    <style>.mdl-card {
+        width: inherit !important;
+    }
+
+    .room-card-container {
+        height: inherit;
+        width: inherit;
+    }
+
+    .card-header {
+        height: 60%;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .card-detail {
+        height: 40%;
+        width: 100%;
+        position: relative;
+        bottom: 20px;
+    }
+
+    .card-detail > * {
+        padding: 0 0 0 0;
+        margin: 0 0 0 0;
+    }
+
+    .strip-black {
+        justify-content: center;
+        height: 40px;
+        background-color: black;
+        color: white;
+    }
+
+    .strip-black-bottom {
+        justify-content: center;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.65);
+        color: white;
+        position: relative;
+        bottom: 30px;
+    }
+
+    .strip-black-bottom > * {
+        margin: 0 0 0 0;
+        align-self: center;
+        font-weight: bold;
+    }
+
+    .geo-place {
+        padding-left: 15px;
+    }
+
+    .strip-black > * {
+        margin: 0 0 0 0;
+        align-self: center;
+        font-weight: bold;
+    }
+
+    .card-image {
+        height: 160px;
+    }
+
+    .busy-progress {
+    }
+
+    .busy-progress > * {
+        margin: 0 0 0 0;
+    }
+
+    .busy-progress h6 {
+        margin: 0 0 0 0;
+    }
+
+    .percent-text {
+        font-weight: bold;
+        color: #D03F31;
+    }
+
+    .progress-place {
+        width: 100%;
+        height: 10px !important;
+        align-self: center;
+    }
+
+    .progress-place > .progressbar {
+        background-color: #D03F31 !important;
+    }
+
+    .progress-place > .bufferbar {
+        background-color: #e0e0e0 !important;
+        background-image: initial !important;
+    }
+
+    .invest-done {
+        margin-left: 5px;
+        color: white;
+    }
+
+    .card-item {
+        justify-content: space-between;
+        margin-top: 5px;
+        align-self: center;
+        width: 90% !important;
+    }
+
+    .em {
+        margin: 0 0 0 0;
+    }
+
+    .invest-done-card {
+        align-self: center;
+        margin-right: 5px;
+        color: black;
+    }
+
+    .my-part-info > * {
+        align-self: center;
+    }
+
+    .my-part-percent-text {
+        font-weight: bold;
+        color: #496AC8;
+    }
+
+    .card-item-info > * {
+        align-self: center;
+    }
+
+    .card-item-icon {
+        align-self: center;
+        margin-right: 5px;
+        color: black;
+    }
+
+    .card-item-text {
+        font-weight: bold;
+        color: darkslategray;
+    }
+    </style>
+</head>
+<body>
+<entry-point class="fit">
+    <div class="fit">
+        <main-app class="fit">
+            <div class="mdl-layout__container">
+                <div style="background-image: url(&quot;/Resources/icons/background/main-image-blur.jpg&quot;);"
+                     class="mdl-layout mdl-js-layout mdl-layout--fixed-header main-container layout vertical is-small-screen is-upgraded">
+                    <header class="mdl-layout__header is-casting-shadow">
+                        <div class="main-menu mdl-shadow--4dp mdl-layout__header-row layout horizontal">
+                            <div location="objects" class="semplex-logo">
+                                <img src="/Resources/icons/Semplex/Semplex_1.png" class="logo">
+                            </div>
+                            <div class="mdl-js-snackbar mdl-snackbar info layout vertical center flex">
+                            </div>
+                            <div class="menu-items flex layout horizontal">
+                                <div location="objects" class="menu-item iron-selected">
+                                    <a target="_self" href="#!objects">
+                                        <h6>Объекты инвестиций</h6>
+                                    </a>
+                                </div>
+                                <div location="about" class="menu-item">
+                                    <a target="_self" href="#!about">
+                                        <h6>О нас</h6>
+                                    </a>
+                                </div>
+                                <div location="private" class="menu-item layout horizontal">
+                                    <a target="_self" href="#!private" class="private-menu">
+                                        <i class="material-icons private-menu-logo">assignment_ind</i>
+                                        <h6>Личный кабинет</h6>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="phone-place layout vertical">
+                                <h6>Бесплатная горячая линия</h6>
+                                <h4 class="phone-number">
+                                    8 <span class="phone-number-colored">800</span> 505 85 96</h4>
+                            </div>
+                            <!--template bindings={}-->
+                        </div>
+                    </header>
+                    <main id="main-viewport" class="mdl-layout__content layout vertical">
+                        <!--template bindings={}-->
+                        <div class="flex layout vertical">
+                            <!--template bindings={}-->
+                            <!--template bindings={}-->
+                            <!--template bindings={}-->
+                            <popular-objects>
+                                <div class="flex layout vertical center">
+                                    <room-set _nghost-ehq-4="" style="width: 100%;" main="" filter-enable="true"
+                                              class="flex" base-url="#objects">
+                                        <room-detail
+                                                style="height: 225px; opacity: 100; top: 70px; pointer-events: none;"
+                                                class="detail-info-panel flex" _ngcontent-ehq-4="">
+                                            <merge-panels _nghost-ehq-6="" right-width="40%" left-width="60%"
+                                                          id="room-detail-panel" duration="0.3"
+                                                          class="more-info-for-new">
+                                                <div style="z-index: 0;" off="" id="more-container"
+                                                     class="more-container horizontal" _ngcontent-ehq-6="">
+
+                                                    <div style="transition: left 0.3s ease 0s, right 0.3s ease 0s; top: 0px; width: 60%; height: 100%;"
+                                                         off="" id="more-info-left"
+                                                         class="more-info more-info-left menu-bordered"
+                                                         _ngcontent-ehq-6="">
+                                                        <div left="" class="more-info-panel layout vertical">
+                                                            <div class="detail-header layout horizontal">
+                                                                <div class="obj-info layout vertical">
+                                                                    <!--template bindings={}-->
+                                                                    <!--template bindings={}-->
+                                                                </div>
+                                                                <div class="star-button layout horizontal">
+                                                                    <i class="material-icons star-icon">
+                                                                        star_border
+                                                                    </i>
+                                                                    <h6 class="empty-margin">Добавить в закладки</h6>
+                                                                </div>
+                                                            </div>
+                                                            <!--template bindings={}-->
+                                                        </div>
+                                                    </div>
+
+                                                    <div style="transition: left 0.3s ease 0s, right 0.3s ease 0s; top: 0px; width: 40%; height: 100%;"
+                                                         off="" id="more-info-right"
+                                                         class="more-info more-info-right menu-bordered"
+                                                         _ngcontent-ehq-6="">
+                                                        <div right="" class="more-info-panel">
+                                                            <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab
+                   mdl-button--colored more-close-button">
+                                                                <i class="material-icons">close</i>
+                                                            </button>
+                                                            <div style="height: 40px; position: relative;">
+                                                                <div class="detail-menu-items flex layout horizontal"
+                                                                     attr-for-selected="location">
+                                                                    <button location="info"
+                                                                            class="mdl-button mdl-js-button mdl-button--raised menu-item">
+                                                                        <h6>информация</h6></button>
+                                                                    <button location="calc"
+                                                                            class="mdl-button mdl-js-button mdl-button--raised menu-item">
+                                                                        <h6>калькулятор</h6></button>
+                                                                    <button location="map"
+                                                                            class="mdl-button mdl-js-button mdl-button--raised menu-item">
+                                                                        <h6>карта</h6></button>
+                                                                </div>
+                                                            </div>
+                                                            <div style="height: 185px;" class="more-info-left-menu">
+                                                                <div style="height: 185px;"
+                                                                     class="flex layout vertical">
+                                                                    <!--template bindings={}-->
+                                                                    <!--template bindings={}-->
+                                                                    <div class="flex">
+                                                                        <detail-info class="flex">
+                                                                            <!--template bindings={}-->
+                                                                        </detail-info>
+                                                                    </div>
+                                                                    <!--template bindings={}-->
+                                                                    <!--template bindings={}-->
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </merge-panels>
+                                        </room-detail>
+                                        <div class="layout vertical center" _ngcontent-ehq-4="">
+                                            <!--template bindings={}-->
+                                            <div class="filter mdl-shadow--2dp layout horizontal center"
+                                                 _ngcontent-ehq-4="">
+                                                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label flex is-upgraded"
+                                                     _ngcontent-ehq-4="">
+                                                    <input id="filter-input" class="mdl-textfield__input"
+                                                           _ngcontent-ehq-4="" type="number">
+                                                    <label for="filter-input" class="mdl-textfield__label"
+                                                           _ngcontent-ehq-4="">Введите сумму инвестиции...</label>
+                                                </div>
+                                                <h6 _ngcontent-ehq-4="">тыс руб</h6>
+                                                <i class="material-icons drop-filter"
+                                                   _ngcontent-ehq-4="">highlight_off</i>
+                                            </div>
+                                        </div>
+                                        <div style="margin-top: 60px;" class="rooms-container layout horizontal"
+                                             _ngcontent-ehq-4="">
+                                            <div class="generic-rooms layout horizontal wrap" _ngcontent-ehq-4="">
+                                                <!--template bindings={}-->
+                                                <room-card class="generic-room" _ngcontent-ehq-4="">
+                                                    <div class="room-card-container mdl-card mdl-shadow--2dp layout vertical">
+                                                        <div class="card-header layout vertical">
+                                                            <div class="strip-black layout horizontal">
+                                                                <div class="layout horizontal flex">
+                                                                    <!--template bindings={}-->
+                                                                    <div for="room-card-1"
+                                                                         class="mdl-tooltip mdl-tooltip--top">
+                                                                        hhhh
+                                                                    </div>
+                                                                </div>
+                                                                <h6>Народная ул. 68 к.1 : этаж 1</h6>
+                                                                <div class="flex"></div>
+                                                            </div>
+                                                            <div class="card-image flex layout vertical">
+                                                                <div style="background: transparent url(&quot;http://storage.googleapis.com/semplex/main-commercial-1-1-1409fcb2-eb93-4390-bcb1-4d4c160f9f0c.jpg&quot;) repeat scroll center center / cover ;"
+                                                                     class="flex card-image-place"></div>
+                                                                <div class="strip-black-bottom layout horizontal">
+                                                                    <i class="material-icons">room</i>
+                                                                    <h6 class="geo-place">Народная улица 68</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-detail layout vertical">
+                                                            <div class="busy-progress layout vertical">
+                                                                <div class="layout horizontal card-item">
+                                                                    <h6>Объект выкуплен на: </h6>
+                                                                    <h6 class="percent-text">20 %</h6>
+                                                                </div>
+                                                                <div buffer="100" progress="20"
+                                                                     class="mdl-progress mdl-js-progress progress-place card-item is-upgraded">
+                                                                    <div style="width: 20%;"
+                                                                         class="progressbar bar bar1"></div>
+                                                                    <div style="width: 100%;"
+                                                                         class="bufferbar bar bar2"></div>
+                                                                    <div style="width: 0%;"
+                                                                         class="auxbar bar bar3"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="my-part-info horizontal layout">
+                                                                    <i class="material-icons invest-done-card">assignment_turned_in</i>
+                                                                    <h6 class="em">Ваша часть: </h6>
+                                                                </div>
+                                                                <h6 class="my-part-percent-text em">0 %</h6>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">
+                                                                        settings_overscan </i>
+                                                                    <h6 class="em">Площадь: </h6>
+                                                                </div>
+                                                                <h6 class="card-item-text em">70.85 м²</h6>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">account_balance</i>
+                                                                    <h6 class="em">Стоимость: </h6>
+                                                                </div>
+                                                                <!--template bindings={}--><h6
+                                                                    class="card-item-text em">9 000 тыс руб</h6>
+                                                                <!--template bindings={}-->
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">
+                                                                        trending_up </i>
+                                                                    <h6 class="em">Годовая доходность: </h6>
+                                                                </div>
+                                                                <h6 class="card-item-text em">13 %</h6>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </room-card>
+
+                                                <room-card class="generic-room" _ngcontent-ehq-4="">
+                                                    <div class="room-card-container mdl-card mdl-shadow--2dp layout vertical">
+                                                        <div class="card-header layout vertical">
+                                                            <div class="strip-black layout horizontal">
+                                                                <div class="layout horizontal flex">
+                                                                    <!--template bindings={}-->
+                                                                    <div for="room-card-2"
+                                                                         class="mdl-tooltip mdl-tooltip--top">
+                                                                        hhhh
+                                                                    </div>
+                                                                </div>
+                                                                <h6>Бонч-Бруевича ул д 2/3, лит А : этаж 1</h6>
+                                                                <div class="flex"></div>
+                                                            </div>
+                                                            <div class="card-image flex layout vertical">
+                                                                <div style="background: transparent url(&quot;http://storage.googleapis.com/semplex/main-commercial-2-2-2393ebd7-814a-4151-b312-6c9dc2b045bf.jpg&quot;) repeat scroll center center / cover ;"
+                                                                     class="flex card-image-place"></div>
+                                                                <div class="strip-black-bottom layout horizontal">
+                                                                    <i class="material-icons">room</i>
+                                                                    <h6 class="geo-place">улица Бонч-Бруевича 2/3</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-detail layout vertical">
+                                                            <div class="busy-progress layout vertical">
+                                                                <div class="layout horizontal card-item">
+                                                                    <h6>Объект выкуплен на: </h6>
+                                                                    <h6 class="percent-text">0 %</h6>
+                                                                </div>
+                                                                <div buffer="100" progress="0"
+                                                                     class="mdl-progress mdl-js-progress progress-place card-item is-upgraded">
+                                                                    <div style="width: 0%;"
+                                                                         class="progressbar bar bar1"></div>
+                                                                    <div style="width: 100%;"
+                                                                         class="bufferbar bar bar2"></div>
+                                                                    <div style="width: 0%;"
+                                                                         class="auxbar bar bar3"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="my-part-info horizontal layout">
+                                                                    <i class="material-icons invest-done-card">assignment_turned_in</i>
+                                                                    <h6 class="em">Ваша часть: </h6>
+                                                                </div>
+                                                                <h6 class="my-part-percent-text em">0 %</h6>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">
+                                                                        settings_overscan </i>
+                                                                    <h6 class="em">Площадь: </h6>
+                                                                </div>
+                                                                <h6 class="card-item-text em">93.2 м²</h6>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">account_balance</i>
+                                                                    <h6 class="em">Стоимость: </h6>
+                                                                </div>
+                                                                <!--template bindings={}--><h6
+                                                                    class="card-item-text em">13 000 тыс руб</h6>
+                                                                <!--template bindings={}-->
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">
+                                                                        trending_up </i>
+                                                                    <h6 class="em">Годовая доходность: </h6>
+                                                                </div>
+                                                                <h6 class="card-item-text em">12 %</h6>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </room-card>
+
+                                                <room-card class="generic-room" _ngcontent-ehq-4="">
+                                                    <div class="room-card-container mdl-card mdl-shadow--2dp layout vertical">
+                                                        <div class="card-header layout vertical">
+                                                            <div class="strip-black layout horizontal">
+                                                                <div class="layout horizontal flex">
+                                                                    <!--template bindings={}-->
+                                                                    <div for="room-card-4"
+                                                                         class="mdl-tooltip mdl-tooltip--top">
+                                                                        hhhh
+                                                                    </div>
+                                                                </div>
+                                                                <h6>Невский проспект 180 к2: этаж 1</h6>
+                                                                <div class="flex"></div>
+                                                            </div>
+                                                            <div class="card-image flex layout vertical">
+                                                                <div style="background: transparent url(&quot;http://storage.googleapis.com/semplex/main-commercial-3-4-3fed3351-3246-46c0-8144-b9284b57f3c9.jpg&quot;) repeat scroll center center / cover ;"
+                                                                     class="flex card-image-place"></div>
+                                                                <div class="strip-black-bottom layout horizontal">
+                                                                    <i class="material-icons">room</i>
+                                                                    <h6 class="geo-place">Невский проспект 180/2</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-detail layout vertical">
+                                                            <div class="busy-progress layout vertical">
+                                                                <div class="layout horizontal card-item">
+                                                                    <h6>Объект выкуплен на: </h6>
+                                                                    <h6 class="percent-text">0 %</h6>
+                                                                </div>
+                                                                <div buffer="100" progress="0"
+                                                                     class="mdl-progress mdl-js-progress progress-place card-item is-upgraded">
+                                                                    <div style="width: 0%;"
+                                                                         class="progressbar bar bar1"></div>
+                                                                    <div style="width: 100%;"
+                                                                         class="bufferbar bar bar2"></div>
+                                                                    <div style="width: 0%;"
+                                                                         class="auxbar bar bar3"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="my-part-info horizontal layout">
+                                                                    <i class="material-icons invest-done-card">assignment_turned_in</i>
+                                                                    <h6 class="em">Ваша часть: </h6>
+                                                                </div>
+                                                                <h6 class="my-part-percent-text em">0 %</h6>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">
+                                                                        settings_overscan </i>
+                                                                    <h6 class="em">Площадь: </h6>
+                                                                </div>
+                                                                <h6 class="card-item-text em">109.9 м²</h6>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">account_balance</i>
+                                                                    <h6 class="em">Стоимость: </h6>
+                                                                </div>
+                                                                <!--template bindings={}--><h6
+                                                                    class="card-item-text em">50 400 тыс руб</h6>
+                                                                <!--template bindings={}-->
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">
+                                                                        trending_up </i>
+                                                                    <h6 class="em">Годовая доходность: </h6>
+                                                                </div>
+                                                                <h6 class="card-item-text em">12 %</h6>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </room-card>
+
+                                                <room-card class="generic-room" _ngcontent-ehq-4="">
+                                                    <div class="room-card-container mdl-card mdl-shadow--2dp layout vertical">
+                                                        <div class="card-header layout vertical">
+                                                            <div class="strip-black layout horizontal">
+                                                                <div class="layout horizontal flex">
+                                                                    <!--template bindings={}-->
+                                                                    <div for="room-card-5"
+                                                                         class="mdl-tooltip mdl-tooltip--top">
+                                                                        hhhh
+                                                                    </div>
+                                                                </div>
+                                                                <h6> 8-я линия В.О д 19 : 3-х этажное здание</h6>
+                                                                <div class="flex"></div>
+                                                            </div>
+                                                            <div class="card-image flex layout vertical">
+                                                                <div style="background: transparent url(&quot;http://storage.googleapis.com/semplex/main-commercial-4-5-3d45dc5e-b136-4732-b986-ec57b1c9dc90.jpg&quot;) repeat scroll center center / cover ;"
+                                                                     class="flex card-image-place"></div>
+                                                                <div class="strip-black-bottom layout horizontal">
+                                                                    <i class="material-icons">room</i>
+                                                                    <h6 class="geo-place">8-я линия В.О. 19</h6>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="card-detail layout vertical">
+                                                            <div class="busy-progress layout vertical">
+                                                                <div class="layout horizontal card-item">
+                                                                    <h6>Объект выкуплен на: </h6>
+                                                                    <h6 class="percent-text">0 %</h6>
+                                                                </div>
+                                                                <div buffer="100" progress="0"
+                                                                     class="mdl-progress mdl-js-progress progress-place card-item is-upgraded">
+                                                                    <div style="width: 0%;"
+                                                                         class="progressbar bar bar1"></div>
+                                                                    <div style="width: 100%;"
+                                                                         class="bufferbar bar bar2"></div>
+                                                                    <div style="width: 0%;"
+                                                                         class="auxbar bar bar3"></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="my-part-info horizontal layout">
+                                                                    <i class="material-icons invest-done-card">assignment_turned_in</i>
+                                                                    <h6 class="em">Ваша часть: </h6>
+                                                                </div>
+                                                                <h6 class="my-part-percent-text em">0 %</h6>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">
+                                                                        settings_overscan </i>
+                                                                    <h6 class="em">Площадь: </h6>
+                                                                </div>
+                                                                <h6 class="card-item-text em">1279.4 м²</h6>
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">account_balance</i>
+                                                                    <h6 class="em">Стоимость: </h6>
+                                                                </div>
+                                                                <!--template bindings={}--><h6
+                                                                    class="card-item-text em">120 000 тыс руб</h6>
+                                                                <!--template bindings={}-->
+                                                            </div>
+                                                            <div class="layout horizontal card-item">
+                                                                <div class="card-item-info horizontal layout">
+                                                                    <i class="material-icons card-item-icon">
+                                                                        trending_up </i>
+                                                                    <h6 class="em">Годовая доходность: </h6>
+                                                                </div>
+                                                                <h6 class="card-item-text em">12 %</h6>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </room-card>
+
+                                            </div>
+                                        </div>
+                                    </room-set>
+                                </div>
+                            </popular-objects>
+                            <!--template bindings={}-->
+                            <!--template bindings={}-->
+                            <!--template bindings={}-->
+                        </div>
+                        <!--template bindings={}-->
+                    </main>
+                </div>
+            </div>
+        </main-app>
+    </div>
+</entry-point>
+
+
+</body>
+</html>
